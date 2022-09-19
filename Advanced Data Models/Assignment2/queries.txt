@@ -1,0 +1,194 @@
+CALL apoc.load.json("file:///tweets.json")
+YIELD value
+MERGE (c:tweet {id: value.id, created_at:value.created_at, text: value.text, user_id : value.user_id})
+SET c.retweet_count = value.retweet_count,c.retweet_id = value.retweet_id, c.replyto_id = value.replyto_id
+
+
+
+
+======================all in set
+
+CALL apoc.load.json("file:///tweets.json")
+YIELD value
+MERGE (c:tweet {id: value.id})
+SET c.created_at = value.created_at, c.text = value.text, c.user_id = value.user_id,
+c.retweet_count = value.retweet_count,c.retweet_id = value.retweet_id, c.replyto_id = value.replyto_id
+
+WITH c, value
+UNWIND value.hash_tags AS hash_tags
+SET c.hash_tags_text = hash_tags.text, c.hash_tags_indices = hash_tags.indices
+WITH c, value
+UNWIND value.user_mentions AS user_mentions
+SET c.user_mentions_id = user_mentions.id, c.user_mentions_indices = user_mentions.indices
+
+
+
+MERGE (p:Person {name: child})
+MERGE (p)-[:CHILD_OF]->(c);
+
+match (n) return (n)
+MATCH (n) DETACH DELETE n
+
+=========tags relation experiment
+CALL apoc.load.json("file:///tweets.json")
+YIELD value
+MERGE (c:tweet {id: value.id})
+SET c.created_at = value.created_at, c.text = value.text, c.user_id = value.user_id,
+c.retweet_count = value.retweet_count,c.retweet_id = value.retweet_id, c.replyto_id = value.replyto_id
+WITH c, value
+UNWIND value.hash_tags AS hash_tags
+merge (c)-[:HASH_TAGS {tags:[hash_tags.text]}]->(p)
+
+
+===========tags in merge instead of set==================
+CALL apoc.load.json("file:///tweets.json")
+YIELD value
+MERGE (c:tweet {id: value.id})
+SET c.created_at = value.created_at, c.text = value.text, c.user_id = value.user_id,
+c.retweet_count = value.retweet_count,c.retweet_id = value.retweet_id, c.replyto_id = value.replyto_id
+WITH c, value
+UNWIND value.hash_tags AS hash_tags_array
+MERGE (hash_tags : hashTags {hash_tags_text: hash_tags_array.text, hash_tags_indices: hash_tags_array.indices })
+MERGE (hash_tags)-[:TAG_OF]->(c);
+//SET c.hash_tags_text = hash_tags.text, c.hash_tags_indices = hash_tags.indices
+
+=========MERGE WITH HASHTAGS=============
+CALL apoc.load.json("file:///tweets.json")
+YIELD value
+MERGE (c:tweet {id: value.id})
+SET c.created_at = value.created_at, c.text = value.text, c.user_id = value.user_id,
+c.retweet_count = value.retweet_count,c.retweet_id = value.retweet_id, c.replyto_id = value.replyto_id
+WITH c, value
+FOREACH(hTag in value.hash_tags  |
+			MERGE (h:Hashtag{text : hTag.text}) 
+			MERGE (h)-[:TAG_OF]->(c) )
+
+
+
+
+==========FINAL QUERY============
+CALL apoc.load.json("file:///tweets.json")
+YIELD value
+MERGE (c:tweet {id: value.id})
+SET c.created_at = value.created_at, c.text = value.text, c.user_id = value.user_id,
+c.retweet_count = value.retweet_count,c.retweet_id = value.retweet_id, c.replyto_id = value.replyto_id
+WITH c, value
+FOREACH(hTag in value.hash_tags  |
+			MERGE (h:Hashtag{text : hTag.text}) 
+			MERGE (h)-[:TAG_OF]->(c) )
+FOREACH(mentions in value.user_mentions  |
+			MERGE (u:userMentioned{id : mentions.id}) 
+			MERGE (u)-[:IS_MENTIONED_IN]->(c) );
+
+
+
+=====Creating RETWEET links
+match (a:tweet),(b:tweet)
+WHERE a.retweet_id = b.id
+merge (a)-[:RETWEETED ]->(b)
+return a,b;
+
+
+=====Creating RETWEET links2
+match (a:tweet)
+WHERE EXISTS (a.retweet_id)
+MERGE (b: tweet {id : a.retweet_id})
+merge (a)-[:RETWEETED ]->(b)
+return a,b;
+
+
+=====Creating REPLIED_TO links
+match (a:tweet),(b:tweet)
+WHERE a.replyto_id = b.id
+merge (a)-[:REPLIED_TO ]->(b)
+return a,b;
+
+=====Creating REPLIED_TO links2
+match (a:tweet)
+WHERE EXISTS (a.replyto_id)
+MERGE (b: tweet {id : a.replyto_id})
+merge (a)-[:REPLIED_TO ]->(b)
+return a,b;
+
+
+
+Q1=====
+match(a:tweet)
+WHERE NOT (a:tweet)<-[:RETWEETED]-() AND NOT (a:tweet)<-[:REPLIED_TO]-() AND NOT EXISTS (a.replyto_id) AND NOT EXISTS(a.retweet_id)
+RETURN count(a);
+
+Q2======FINAL=====
+match (h:Hashtag)--(a:tweet)
+WHERE NOT EXISTS(a.retweet_id)
+RETURN h.text, count(h.text)
+ORDER BY (count(h.text)) DESC
+LIMIT 5;
+
+
+
+match (a:hashTags)-[:TAG_OF]-(t:tweet)--(c:tweet) 
+WHERE (a)-[:TAG_OF]->(t)<-[:REPLIED_TO]-(c) OR NOT (a)-[:TAG_OF]->(t)<-[:RETWEETED]-(c)
+RETURN (a.hash_tags_text)
+
+match (h:hashTags) return COUNT(h.hash_tags_text),h.hash_tags_text
+
+match (h:hashTags)--(a:tweet)-[]-(b:tweet)
+WHERE NOT (h:hashTags)--(a:tweet)<-[:RETWEETED]-(b:tweet)
+RETURN h.hash_tags_text
+
+match (h:Hashtag)--(a:tweet)-[]-(b:tweet)
+WHERE NOT (h:Hashtag)--(a:tweet)<-[:RETWEETED]-(b:tweet)
+RETURN h.text
+
+
+==========ALL OCCURENCES========
+match (h:Hashtag)--(a:tweet)
+WHERE NOT (h:Hashtag)-->(a:tweet)<-[:RETWEETED]-()
+RETURN h.text, count(h.text)
+
+
+===============Q3
+MATCH (a:tweet)<-[*]-(b:tweet)
+RETURN a.id,COUNT(a)
+ORDER BY COUNT(a) DESC
+LIMIT 1;
+
+
+===============Q4
+MATCH (a:tweet)<-[*]-(b:tweet)
+RETURN a.id,COUNT(DISTINCT (b.user_id))
+ORDER BY COUNT(DISTINCT (b.user_id)) DESC
+LIMIT 1;
+
+============Q5
+MATCH p = (a:tweet )<-[*]-(b:tweet)
+RETURN length(p),REDUCE(output = [], n in nodes(p)|output +n.id)
+ORDER BY length(p) DESC
+LIMIT 1;
+
+============Q6
+match (u:userMentioned)--(a:tweet)
+WHERE NOT u.id = a.user_id
+RETURN u,count(a)
+ORDER BY COUNT(a) DESC
+LIMIT 5;
+
+=====ID----
+match (u:userMentioned)--(a:tweet)
+WHERE NOT u.id = a.user_id
+RETURN u.id,count(a)
+ORDER BY COUNT(a) DESC
+LIMIT 5;
+
+
+match p = (u:userMentioned)--(a:tweet)-[:REPLIED_TO|:RETWEETED]-()
+WITH nodes(p) AS n,u,a
+UNWIND n as nodeData
+WITH tail(nodeData) AS tweetData,n,u,a
+WHERE NOT u.id IN tweetData.user_id
+return u.id, count(nodeData)
+ORDER BY count(nodeData) DESC
+LIMIT 5
+
+
+match (u:userMentioned{id : 24335624})-[*]-(a:tweet {id : 1306104147209584640}) return u,a
