@@ -1,0 +1,1730 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20202.20.0614.2338                               -->
+<workbook original-version='18.1' source-build='2020.2.2 (20202.20.0614.2338)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='IMDB_Netflix' inline='true' name='federated.0p15stg1gnn6wh18soyzt0px1xmh' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='IMDB_Netflix' name='textscan.1xy8v6t088xwde12sobi10nfxhuu'>
+            <connection class='textscan' directory='C:/Users/Saif Shaikh/OneDrive - The University of Sydney (Students)/Academics/Semester 3/VA/Assignment 2' filename='IMDB_Netflix.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1xy8v6t088xwde12sobi10nfxhuu' name='IMDB_Netflix.csv' table='[IMDB_Netflix#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+            <column datatype='integer' name='show_id' ordinal='0' />
+            <column datatype='string' name='type' ordinal='1' />
+            <column datatype='string' name='title' ordinal='2' />
+            <column datatype='string' name='director' ordinal='3' />
+            <column datatype='string' name='cast' ordinal='4' />
+            <column datatype='string' name='country' ordinal='5' />
+            <column datatype='string' name='date_added' ordinal='6' />
+            <column datatype='integer' name='release_year' ordinal='7' />
+            <column datatype='string' name='rating' ordinal='8' />
+            <column datatype='string' name='duration' ordinal='9' />
+            <column datatype='string' name='listed_in' ordinal='10' />
+            <column datatype='string' name='description' ordinal='11' />
+            <column datatype='integer' name='year_added' ordinal='12' />
+            <column datatype='integer' name='month_added' ordinal='13' />
+            <column datatype='string' name='imdb_title_id' ordinal='14' />
+            <column datatype='string' name='title-1' ordinal='15' />
+            <column datatype='string' name='original_title' ordinal='16' />
+            <column datatype='integer' name='year' ordinal='17' />
+            <column datatype='date' name='date_published' ordinal='18' />
+            <column datatype='string' name='genre' ordinal='19' />
+            <column datatype='integer' name='duration-1' ordinal='20' />
+            <column datatype='string' name='country-1' ordinal='21' />
+            <column datatype='string' name='language' ordinal='22' />
+            <column datatype='string' name='director-1' ordinal='23' />
+            <column datatype='string' name='writer' ordinal='24' />
+            <column datatype='string' name='production_company' ordinal='25' />
+            <column datatype='string' name='actors' ordinal='26' />
+            <column datatype='string' name='description-1' ordinal='27' />
+            <column datatype='real' name='avg_vote' ordinal='28' />
+            <column datatype='integer' name='votes' ordinal='29' />
+            <column datatype='integer' name='budget' ordinal='30' />
+            <column datatype='integer' name='usa_gross_income' ordinal='31' />
+            <column datatype='integer' name='worlwide_gross_income' ordinal='32' />
+            <column datatype='integer' name='metascore' ordinal='33' />
+            <column datatype='integer' name='reviews_from_users' ordinal='34' />
+            <column datatype='integer' name='reviews_from_critics' ordinal='35' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1xy8v6t088xwde12sobi10nfxhuu' name='IMDB_Netflix.csv' table='[IMDB_Netflix#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+            <column datatype='integer' name='show_id' ordinal='0' />
+            <column datatype='string' name='type' ordinal='1' />
+            <column datatype='string' name='title' ordinal='2' />
+            <column datatype='string' name='director' ordinal='3' />
+            <column datatype='string' name='cast' ordinal='4' />
+            <column datatype='string' name='country' ordinal='5' />
+            <column datatype='string' name='date_added' ordinal='6' />
+            <column datatype='integer' name='release_year' ordinal='7' />
+            <column datatype='string' name='rating' ordinal='8' />
+            <column datatype='string' name='duration' ordinal='9' />
+            <column datatype='string' name='listed_in' ordinal='10' />
+            <column datatype='string' name='description' ordinal='11' />
+            <column datatype='integer' name='year_added' ordinal='12' />
+            <column datatype='integer' name='month_added' ordinal='13' />
+            <column datatype='string' name='imdb_title_id' ordinal='14' />
+            <column datatype='string' name='title-1' ordinal='15' />
+            <column datatype='string' name='original_title' ordinal='16' />
+            <column datatype='integer' name='year' ordinal='17' />
+            <column datatype='date' name='date_published' ordinal='18' />
+            <column datatype='string' name='genre' ordinal='19' />
+            <column datatype='integer' name='duration-1' ordinal='20' />
+            <column datatype='string' name='country-1' ordinal='21' />
+            <column datatype='string' name='language' ordinal='22' />
+            <column datatype='string' name='director-1' ordinal='23' />
+            <column datatype='string' name='writer' ordinal='24' />
+            <column datatype='string' name='production_company' ordinal='25' />
+            <column datatype='string' name='actors' ordinal='26' />
+            <column datatype='string' name='description-1' ordinal='27' />
+            <column datatype='real' name='avg_vote' ordinal='28' />
+            <column datatype='integer' name='votes' ordinal='29' />
+            <column datatype='integer' name='budget' ordinal='30' />
+            <column datatype='integer' name='usa_gross_income' ordinal='31' />
+            <column datatype='integer' name='worlwide_gross_income' ordinal='32' />
+            <column datatype='integer' name='metascore' ordinal='33' />
+            <column datatype='integer' name='reviews_from_users' ordinal='34' />
+            <column datatype='integer' name='reviews_from_critics' ordinal='35' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_AU&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>show_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[show_id]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>show_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[type]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>director</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[director]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>director</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cast</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[cast]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>cast</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_added</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[date_added]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>date_added</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[release_year]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>release_year</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rating</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rating]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>rating</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[duration]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>duration</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>listed_in</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[listed_in]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>listed_in</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[description]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>description</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year_added</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year_added]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>year_added</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_added</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[month_added]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>month_added</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>imdb_title_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[imdb_title_id]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>imdb_title_id</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title-1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title-1]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>title-1</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>original_title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[original_title]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>original_title</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_published</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date_published]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>date_published</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>genre</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[genre]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>genre</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration-1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[duration-1]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>duration-1</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country-1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country-1]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>country-1</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>language</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[language]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>language</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>director-1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[director-1]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>director-1</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>writer</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[writer]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>writer</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>production_company</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[production_company]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>production_company</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>actors</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[actors]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>actors</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>description-1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[description-1]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>description-1</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_vote</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_vote]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>avg_vote</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>votes</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[votes]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>votes</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>budget</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[budget]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>budget</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usa_gross_income</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[usa_gross_income]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>usa_gross_income</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>worlwide_gross_income</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[worlwide_gross_income]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>worlwide_gross_income</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>metascore</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[metascore]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>metascore</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>reviews_from_users</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[reviews_from_users]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>reviews_from_users</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>reviews_from_critics</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[reviews_from_critics]</local-name>
+            <parent-name>[IMDB_Netflix.csv]</parent-name>
+            <remote-alias>reviews_from_critics</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='IMDB_Netflix.csv' datatype='table' name='[__tableau_internal_object_id__].[IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403]' role='measure' type='quantitative' />
+      <column datatype='string' name='[country-1]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' name='[genre]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[month_added]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[release_year]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[show_id]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[year_added]' role='dimension' type='quantitative' />
+      <column-instance column='[genre]' derivation='None' name='[none:genre:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:genre:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Action, Adventure, History&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Action, Comedy, Thriller&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Action, Fantasy, Horror&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Adventure, Drama&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Animation, Adventure, Family&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Comedy&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Comedy, Family, Fantasy&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Comedy, Romance, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Crime, Horror, Mystery&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Drama, Fantasy, Horror&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Drama, Musical&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Drama, Western&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Horror, Romance, Thriller&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Thriller&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Action, Comedy, Drama&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Action, Drama, Music&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Action, Western&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Adventure, Horror&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Biography, Comedy, Musical&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Comedy, Drama, Musical&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Comedy, Music, Musical&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Crime, Drama, Film-Noir&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Drama, Family, Music&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Drama, Horror, Mystery&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Drama, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Horror&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Mystery, Sci-Fi, Thriller&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Action, Adventure, Crime&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Action, Comedy, Horror&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Action, Drama, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Adventure, Comedy, Crime&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Animation, Action, Adventure&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Biography, Drama, Music&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Comedy, Drama, Sport&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Comedy, Musical, Romance&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Crime, Drama, Romance&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Drama, Family, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Drama, Music&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Drama, Thriller, Crime&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Horror, Mystery, Romance&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Romance, Sci-Fi, Thriller&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Action, Adventure, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Action, Crime, Horror&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Action, Musical, Thriller&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Adventure, Drama, Mystery&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Animation, Drama, Family&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Comedy, Crime, Romance&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Comedy, Fantasy, Horror&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Comedy, Thriller&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Crime, Mystery, Thriller&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Drama, Film-Noir, Romance&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Drama, Mystery, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Family, Musical&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Horror, Thriller&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Action, Adventure, Horror&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Action, Crime&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Action, Fantasy, Thriller&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Adventure, Drama, Family&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Animation, Comedy, Crime&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Comedy, Crime&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Comedy, Family, Musical&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Comedy, Romance, Sport&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Crime, Horror, Thriller&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Drama, Fantasy, Mystery&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Drama, Musical, Romance&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Family&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Horror, Romance, War&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Thriller, Crime, Drama&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Action, Adventure, Drama&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Action, Comedy, Music&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Action, Drama, Sport&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Adventure, Comedy, Drama&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Animation, Action, Comedy&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Biography, Drama, Romance&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Comedy, Drama, Thriller&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Comedy, Mystery&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Crime, Drama, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Drama, Family, Sport&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Drama, Music, Musical&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Drama, Thriller, Horror&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Horror, Mystery, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Action, Comedy&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Action, Drama, History&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Action, Sci-Fi, Thriller&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Adventure, Family, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Biography, Comedy, Crime&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Comedy, Drama, Horror&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Comedy, Horror, Thriller&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Crime, Drama, Family&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Drama, Family&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Drama, History, War&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Drama, Romance, Thriller&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Fantasy, Horror, Thriller&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Mystery&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Action&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Action, Comedy, Family&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Action, Drama, Musical&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Adventure, Biography, Crime&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Adventure, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Biography, Crime, Drama&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Comedy, Drama, Mystery&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Comedy, Music, Romance&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Crime, Drama, History&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Drama, Family, Musical&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Drama, Horror, Romance&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Drama, Sci-Fi, Thriller&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Horror, Drama&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Mystery, Thriller&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Action, Biography, Drama&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Action, Drama, Family&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Action, Romance, Thriller&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Adventure, Family, Fantasy&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Biography&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Comedy, Drama, Family&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Comedy, Horror, Romance&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Crime&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Drama, Comedy&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Drama, History, Sport&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Drama, Romance, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Fantasy, Horror, Mystery&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Musical, Fantasy&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Action, Adventure, Family&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Action, Comedy, Romance&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Action, Drama, Thriller&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Adventure, Comedy, Family&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Animation, Adventure, Comedy&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Biography, Drama, Sport&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Comedy, Drama, War&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Comedy, Mystery, Thriller&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Crime, Drama, Thriller&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Drama, Fantasy&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Drama, Music, Romance&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Drama, Thriller, War&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Horror, Mystery, Thriller&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Sci-Fi, Thriller&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Action, Adventure, Thriller&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Action, Crime, Romance&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Action, Mystery, Thriller&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Adventure, Drama, Romance&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Animation, Drama, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Comedy, Crime, Thriller&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Comedy, Fantasy, Romance&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Comedy, Thriller, Horror&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Crime, Romance, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Drama, Film-Noir, Sport&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Drama, Mystery, Thriller&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Family, Romance&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Horror, Western&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Action, Adventure, War&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Action, Crime, Thriller&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Action, Romance&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Adventure, Drama, Thriller&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Animation, Family&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Comedy, Crime, Western&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Comedy, Horror&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Comedy, War&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Crime, Thriller&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Drama, History&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Drama, Romance&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Family, Romance, Comedy&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Music, Romance&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Action, Biography, History&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Action, Drama, Fantasy&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Action, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Adventure, Family, Mystery&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Biography, Comedy&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Comedy, Drama, Fantasy&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Comedy, Horror, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Crime, Drama&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Drama, Crime, Thriller&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Drama, History, Thriller&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Drama, Romance, Sport&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Fantasy, Horror, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Musical, Romance&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Action, Comedy, Crime&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Action, Drama, Horror&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Action, Thriller&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Adventure, Fantasy, Romance&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Biography, Comedy, Drama&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Comedy, Drama, Music&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Comedy, Music&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Crime, Drama, Fantasy&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Drama, Family, History&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Drama, Horror&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Drama, Romance, War&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Fantasy, Music&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Mystery, Romance, Thriller&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Action, Adventure, Mystery&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Action, Crime, Drama&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Action, Horror, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Adventure, Drama, Fantasy&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Animation, Comedy, Drama&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Comedy, Crime, Drama&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Comedy, Family, Romance&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Comedy, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Crime, Mystery, Drama&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Drama, Fantasy, Romance&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Drama, Mystery&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Family, Drama&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Horror, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Thriller, Drama&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Action, Adventure, Fantasy&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Action, Comedy, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Action, Drama, War&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Adventure, Crime, Drama&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Animation, Adventure, Drama&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Biography, Drama, Thriller&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Comedy, Family&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Comedy, Romance&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Crime, History, Thriller&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Drama, Fantasy, History&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Drama, Music, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Drama, War&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Horror, Romance&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Sport&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Action, Adventure&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Action, Comedy, Fantasy&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Action, Drama, Mystery&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Adventure, Biography, Drama&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Adventure, Thriller&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Biography, Drama&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Comedy, Drama, Romance&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Comedy, Musical&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Crime, Drama, Horror&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Drama, Family, Mystery&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Drama, Horror, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Drama, Sport&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Horror, Music, Thriller&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Romance&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Action, Biography, Crime&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Action, Drama&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Action, Romance, Sport&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Adventure, Family&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Animation, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Comedy, Drama&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Comedy, Horror, Mystery&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Comedy, Western&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Drama, History, Romance&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Drama, Romance, Musical&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Fantasy&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Musical, Drama, Romance&quot;</bucket>
+            </map>
+            <map to='#ff0000'>
+              <bucket>&quot;Drama&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Action, Adventure, Romance&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Action, Crime, History&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Action, Horror, Thriller&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Adventure, Drama, Horror&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Animation, Comedy, Family&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Comedy, Crime, Mystery&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Comedy, Family, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Comedy, Sport&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Crime, Mystery, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Drama, Fantasy, Thriller&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Drama, Mystery, Romance&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Family, Fantasy&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Horror, Sci-Fi, Thriller&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Western&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Action, Adventure, Comedy&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Action, Comedy, History&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Action, Drama, Romance&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Adventure, Comedy&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Animation&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Biography, Drama, History&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Comedy, Drama, Sci-Fi&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Comedy, Musical, Drama&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Crime, Drama, Mystery&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Drama, Family, Romance&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Drama, Horror, Thriller&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Drama, Thriller&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Horror, Mystery&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Romance, Comedy&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Australia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='IMDB_Netflix.csv' id='IMDB_Netflix.csv_AE90CD14ACE3451699179CA8A617B403'>
+            <properties context=''>
+              <relation connection='textscan.1xy8v6t088xwde12sobi10nfxhuu' name='IMDB_Netflix.csv' table='[IMDB_Netflix#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+                  <column datatype='integer' name='show_id' ordinal='0' />
+                  <column datatype='string' name='type' ordinal='1' />
+                  <column datatype='string' name='title' ordinal='2' />
+                  <column datatype='string' name='director' ordinal='3' />
+                  <column datatype='string' name='cast' ordinal='4' />
+                  <column datatype='string' name='country' ordinal='5' />
+                  <column datatype='string' name='date_added' ordinal='6' />
+                  <column datatype='integer' name='release_year' ordinal='7' />
+                  <column datatype='string' name='rating' ordinal='8' />
+                  <column datatype='string' name='duration' ordinal='9' />
+                  <column datatype='string' name='listed_in' ordinal='10' />
+                  <column datatype='string' name='description' ordinal='11' />
+                  <column datatype='integer' name='year_added' ordinal='12' />
+                  <column datatype='integer' name='month_added' ordinal='13' />
+                  <column datatype='string' name='imdb_title_id' ordinal='14' />
+                  <column datatype='string' name='title-1' ordinal='15' />
+                  <column datatype='string' name='original_title' ordinal='16' />
+                  <column datatype='integer' name='year' ordinal='17' />
+                  <column datatype='date' name='date_published' ordinal='18' />
+                  <column datatype='string' name='genre' ordinal='19' />
+                  <column datatype='integer' name='duration-1' ordinal='20' />
+                  <column datatype='string' name='country-1' ordinal='21' />
+                  <column datatype='string' name='language' ordinal='22' />
+                  <column datatype='string' name='director-1' ordinal='23' />
+                  <column datatype='string' name='writer' ordinal='24' />
+                  <column datatype='string' name='production_company' ordinal='25' />
+                  <column datatype='string' name='actors' ordinal='26' />
+                  <column datatype='string' name='description-1' ordinal='27' />
+                  <column datatype='real' name='avg_vote' ordinal='28' />
+                  <column datatype='integer' name='votes' ordinal='29' />
+                  <column datatype='integer' name='budget' ordinal='30' />
+                  <column datatype='integer' name='usa_gross_income' ordinal='31' />
+                  <column datatype='integer' name='worlwide_gross_income' ordinal='32' />
+                  <column datatype='integer' name='metascore' ordinal='33' />
+                  <column datatype='integer' name='reviews_from_users' ordinal='34' />
+                  <column datatype='integer' name='reviews_from_critics' ordinal='35' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='IMDB_Netflix' name='federated.0p15stg1gnn6wh18soyzt0px1xmh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0p15stg1gnn6wh18soyzt0px1xmh'>
+            <column datatype='real' name='[avg_vote]' role='measure' type='quantitative' />
+            <column-instance column='[avg_vote]' derivation='Count' name='[cnt:avg_vote:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[genre]' role='dimension' type='nominal' />
+            <column-instance column='[genre]' derivation='None' name='[none:genre:nk]' pivot='key' type='nominal' />
+            <column-instance column='[type]' derivation='None' name='[none:type:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[type]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0p15stg1gnn6wh18soyzt0px1xmh].[cnt:avg_vote:qk]' included-values='in-range'>
+            <min>44</min>
+            <max>304</max>
+          </filter>
+          <filter class='categorical' column='[federated.0p15stg1gnn6wh18soyzt0px1xmh].[none:type:nk]'>
+            <groupfilter function='member' level='[none:type:nk]' member='&quot;Movie&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0p15stg1gnn6wh18soyzt0px1xmh].[none:genre:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0p15stg1gnn6wh18soyzt0px1xmh].[cnt:avg_vote:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0p15stg1gnn6wh18soyzt0px1xmh].[none:type:nk]</column>
+            <column>[federated.0p15stg1gnn6wh18soyzt0px1xmh].[cnt:avg_vote:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.0p15stg1gnn6wh18soyzt0px1xmh].[cnt:avg_vote:qk]' value='64' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0p15stg1gnn6wh18soyzt0px1xmh].[none:genre:nk]' value='94' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.0p15stg1gnn6wh18soyzt0px1xmh].[none:genre:nk]' value='-90' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0p15stg1gnn6wh18soyzt0px1xmh].[none:genre:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0p15stg1gnn6wh18soyzt0px1xmh].[cnt:avg_vote:qk]</rows>
+        <cols>[federated.0p15stg1gnn6wh18soyzt0px1xmh].[none:genre:nk]</cols>
+      </table>
+      <simple-id uuid='{0B869F06-13FB-4057-BDA8-0B39A69E753A}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='6' param='[federated.0p15stg1gnn6wh18soyzt0px1xmh].[none:genre:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0p15stg1gnn6wh18soyzt0px1xmh].[none:director:nk]</field>
+            <field>[federated.0p15stg1gnn6wh18soyzt0px1xmh].[none:duration:nk]</field>
+            <field>[federated.0p15stg1gnn6wh18soyzt0px1xmh].[none:genre:nk]</field>
+            <field>[federated.0p15stg1gnn6wh18soyzt0px1xmh].[none:title:nk]</field>
+            <field>[federated.0p15stg1gnn6wh18soyzt0px1xmh].[none:type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{45C4F1D9-DF6B-4270-8772-C4946CAB10A1}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      AElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
